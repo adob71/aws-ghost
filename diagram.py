@@ -1,16 +1,32 @@
-from diagrams import Cluster, Diagram
-from diagrams.aws.network import InternetGateway, ALB
+from diagrams import Diagram, Cluster
+from diagrams.aws.network import VPC, InternetGateway, ALB
 from diagrams.aws.compute import EC2AutoScaling, EC2Instance
 from diagrams.aws.database import RDS
+from diagrams.aws.devtools import Codepipeline, Codecommit, Codebuild, Codedeploy
+from diagrams.aws.management import Cloudwatch
 
-with Diagram("Diagram", direction="TB", show=False):
+
+with Diagram("Diagram", direction="LR", show=False):
+
     with Cluster("AWS"):
-        IGW = InternetGateway("IGW")
+
         with Cluster("VPC"):
-            LB = ALB("LB")
-            ASG = EC2AutoScaling("ASG")
-            with Cluster("EC2"):
-                EC2Instance = [EC2Instance("nginx+ghost AZ1"), EC2Instance("nginx+ghost AZ2")]
+            InternetGateway = InternetGateway("InternetGateway")
+            ALB = ALB("ALB")
+            EC2AutoScaling = EC2AutoScaling("EC2AutoScaling")
+            with Cluster("EC2Instance"):
+                EC2Instance = [EC2Instance("EC2 Instance AZ1"), EC2Instance("EC2 Standby AZ2")]
             with Cluster("RDS"):
-                RDS = [RDS("mysql AZ1"), RDS("mysql AZ2")]
-        IGW >> LB >> ASG >> EC2Instance[0] >> RDS[0]
+                RDS = [RDS("DB Instance AZ1"), RDS("DB Standby AZ2")]      
+            InternetGateway >> ALB >> EC2AutoScaling >> EC2Instance[0] >> RDS[0]
+
+        with Cluster("CodePipeline"):
+            Codecommit = Codecommit("CodeCommit")
+            Codebuild = Codebuild("CodeBuild")
+            Codedeploy = Codedeploy("CodeDeploy")
+            Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
+
+        with Cluster("CloudWatch"):
+            Cloudwatch = Cloudwatch("CloudWatch")
+            EC2Instance[0] >> Cloudwatch
+
