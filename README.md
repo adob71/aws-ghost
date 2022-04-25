@@ -1,9 +1,10 @@
 # nordcloud
 
+# Diagram
 ![Diagram](https://github.com/adob71/nordcloud/blob/main/diagram.png)
 
-* AWS
-* VPC
+# AWS
+# VPC
 * CloudFront
 * InternetGateway
 * ALB
@@ -15,10 +16,10 @@
 * DB Standby AZ2
 * CloudFront >> InternetGateway >> ALB >> EC2Instance[0] >> RDS[0]
 
-* CloudWatch
+# CloudWatch
 * EC2Instance[0] >> Cloudwatch
 
-* CodePipeline
+# CodePipeline
 * CodeCommit
 * CodeBuild
 * CodeDeploy
