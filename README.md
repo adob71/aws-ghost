@@ -4,6 +4,7 @@
 ![Diagram](https://github.com/adob71/nordcloud/blob/main/diagram.png)
 
 # AWS
+# OrganizationsAccount
 # VPC
 * CloudFront
 * InternetGateway
@@ -16,12 +17,11 @@
 * DB Standby AZ2
 * CloudFront >> InternetGateway >> ALB >> EC2Instance[0] >> RDS[0]
 
-# CloudWatch
-* EC2Instance[0] >> Cloudwatch
-
 # CodePipeline
 * CodeCommit
 * CodeBuild
 * CodeDeploy
 * Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
 
+# CloudWatch
+* EC2Instance[0] >> Cloudwatch
