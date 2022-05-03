@@ -8,24 +8,25 @@
 # Components :
 # AWS
 # OrganizationsAccount
-# VPC
-* CloudFront
-* InternetGateway
-* ALB
-* EC2AutoScaling
-* EC2 Instance AZ1
-* EC2 Standby AZ2
-* RDS
-* DB Instance AZ1
-* DB Standby AZ2
-* Users >> CloudFront >> InternetGateway >> ALB >> EC2Instance[0] >> RDS[0]
-
-# CodePipeline
-* CodeCommit
-* CodeBuild
-* CodeDeploy
-* DevOps >> Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
-
-# CloudWatch
-* EC2Instance[0] >> Cloudwatch
-
+* (1) CodeCommit
+text
+* (2) CodeBuild
+text
+* (3) CodeDeploy
+text
+* (4) EC2 Instance AZ1
+text
+* (5) DB Instance AZ1
+text
+* (6) CloudFront
+text
+* (7) InternetGateway
+text
+* (8) ALB
+text
+* (9) Cloudwatch
+text
+* (10) EC2 Standby AZ2
+text
+* (11) DB Standby AZ2
+text

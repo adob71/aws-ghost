@@ -16,21 +16,21 @@ with Diagram("Diagram", direction="LR", show=False):
         with Cluster("OrganizationsAccount"):
 
             with Cluster("VPC"):
-                CloudFront = CloudFront("CloudFront")
-                InternetGateway = InternetGateway("InternetGateway")
-                ALB = ALB("ALB")
+                CloudFront = CloudFront("(6) CloudFront")
+                InternetGateway = InternetGateway("(7) InternetGateway")
+                ALB = ALB("(8) ALB")
                 with Cluster("EC2AutoScaling"):
-                    EC2Instance = [EC2Instance("EC2 Instance AZ1"), EC2Instance("EC2 Standby AZ2")]
+                    EC2Instance = [EC2Instance("(4) EC2 Instance AZ1"), EC2Instance("(10) EC2 Standby AZ2")]
                 with Cluster("RDS"):
-                    RDS = [RDS("DB Instance AZ1"), RDS("DB Standby AZ2")]      
+                    RDS = [RDS("(5) DB Instance AZ1"), RDS("(11) DB Standby AZ2")]      
                 Users >> CloudFront >> InternetGateway >> ALB >> EC2Instance[0] >> RDS[0]
 
-            with Cluster("CodePipeline"):
-                Codecommit = Codecommit("CodeCommit")
-                Codebuild = Codebuild("CodeBuild")
-                Codedeploy = Codedeploy("CodeDeploy")
-                DevOps >> Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
-
             with Cluster("CloudWatch"):
-                Cloudwatch = Cloudwatch("CloudWatch")
+                Cloudwatch = Cloudwatch("(9) CloudWatch")
                 EC2Instance[0] >> Cloudwatch
+
+            with Cluster("CodePipeline"):
+                Codecommit = Codecommit("(1) CodeCommit")
+                Codebuild = Codebuild("(2) CodeBuild")
+                Codedeploy = Codedeploy("(3) CodeDeploy")
+                DevOps >> Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
