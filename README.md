@@ -11,25 +11,25 @@ text
 text
 # Components   
 text
-* (1) CodeCommit  
+* (1) CloudFront  
 text
-* (2) CodeBuild  
+* (2) InternetGateway  
 text
-* (3) CodeDeploy  
+* (3) ALB  
 text
-* (4) EC2 Instance AZ1  
+* (4) EC2 Instance AZ1
 text
-* (5) DB Instance AZ1  
+* (5) EC2 Standby AZ2
 text
-* (6) CloudFront  
+* (6) DB Instance AZ1
 text
-* (7) InternetGateway  
+* (7) DB Standby AZ2
 text
-* (8) ALB  
+* (8) Cloudwatch  
 text
-* (9) Cloudwatch  
+* (9) CodeCommit
 text
-* (10) EC2 Standby AZ2  
+* (10) CodeBuild
 text
-* (11) DB Standby AZ2  
+* (11) CodeDeploy
 text
