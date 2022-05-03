@@ -22,14 +22,14 @@ The running compute instance hosts the web server (nginx), the application (ghos
 * (5) EC2 Standby AZ2  
 The standby compute instance gets launched if the running compute instance fails.
 * (6) DB Instance AZ1  
-The running database instance hosts the database (mysql) and replicates to the standby database instance.The running database instance is placed in the private subnet and security group.
+The running database instance hosts the database (mysql) and replicates to the standby database instance. The running database instance is placed in the private subnet and security group.
 * (7) DB Standby AZ2  
-The standby database instance gets activated if the running database instance fails.
+The standby database instance becomes active if the running database instance fails.
 * (8) Cloudwatch  
 The performance metrics are collected from the running compute instance and the running database instance.
 * (9) CodeCommit  
 Developers push the code (ghost) to the git repository.
 * (10) CodeBuild  
-The code gets built into the application. This component is not required if the code is interpreted java script.
+The code gets built. This component is not required if the code is interpreted (java script).
 * (11) CodeDeploy  
 The application gets deployed to the running compute instance.
