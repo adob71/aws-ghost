@@ -33,8 +33,8 @@ with Diagram("Diagram", direction="LR", show=False):
             with Cluster("CloudWatch"):
                 Cloudwatch = Cloudwatch("(8) CloudWatch")
 
-                EC2Instance[0] >> Cloudwatch
-                RDS[0] >> Cloudwatch
+#                EC2Instance[0] >> Cloudwatch
+#                RDS[0] >> Cloudwatch
 
             with Cluster("CodePipeline"):
                 Codecommit = Codecommit("(9) CodeCommit")
