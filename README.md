@@ -8,25 +8,25 @@
 # Components :
 # AWS
 # OrganizationsAccount
-* (1) CodeCommit
+* (1) CodeCommit  
 text
-* (2) CodeBuild
+* (2) CodeBuild  
 text
-* (3) CodeDeploy
+* (3) CodeDeploy  
 text
-* (4) EC2 Instance AZ1
+* (4) EC2 Instance AZ1  
 text
-* (5) DB Instance AZ1
+* (5) DB Instance AZ1  
 text
-* (6) CloudFront
+* (6) CloudFront  
 text
-* (7) InternetGateway
+* (7) InternetGateway  
 text
-* (8) ALB
+* (8) ALB  
 text
-* (9) Cloudwatch
+* (9) Cloudwatch  
 text
-* (10) EC2 Standby AZ2
+* (10) EC2 Standby AZ2  
 text
-* (11) DB Standby AZ2
+* (11) DB Standby AZ2  
 text
