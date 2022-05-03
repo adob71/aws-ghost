@@ -5,10 +5,11 @@
 # Diagram
 ![Diagram](https://github.com/adob71/nordcloud/blob/main/diagram.png)
 
-# Components :
 # AWS  
 text
 # OrganizationsAccount  
+text
+# Components   
 text
 * (1) CodeCommit  
 text
