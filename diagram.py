@@ -22,11 +22,11 @@ with Diagram("Diagram", direction="LR", show=False):
 
                 with Cluster("EC2AutoScaling"):
                     EC2Instance = [EC2Instance("(4) EC2 Instance AZ1"), EC2Instance("(5) EC2 Standby AZ2")]
-                EC2Instance[0] >> Edge(color="red", style="dashed", label="Failover") >> EC2Instance[1]
+#                EC2Instance[0] >> Edge(color="red", style="dashed", label="Failover") >> EC2Instance[1]
 
                 with Cluster("RDS"):
                     RDS = [RDS("(6) DB Instance AZ1"), RDS("(7) DB Standby AZ2")]      
-                RDS[0] >> Edge(color="red", style="dashed", label="Replicate") >> RDS[1]
+#                RDS[0] >> Edge(color="red", style="dashed", label="Replicate") >> RDS[1]
 
                 Users >> CloudFront >> InternetGateway >> ALB >> EC2Instance[0] >> RDS[0]
 
@@ -41,4 +41,4 @@ with Diagram("Diagram", direction="LR", show=False):
                 Codebuild = Codebuild("(10) CodeBuild")
                 Codedeploy = Codedeploy("(11) CodeDeploy")
 
-                DevOps >> Codecommit >> Codebuild >> Codedeploy
+                DevOps >> Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
