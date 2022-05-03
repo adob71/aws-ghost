@@ -6,27 +6,29 @@
 ![Diagram](https://github.com/adob71/nordcloud/blob/main/diagram.png)
 
 # Components :
-# AWS
-# OrganizationsAccount
-* (1) CodeCommit  
+# AWS\
 text
-* (2) CodeBuild  
+# OrganizationsAccount\
 text
-* (3) CodeDeploy  
+* (1) CodeCommit/
 text
-* (4) EC2 Instance AZ1  
+* (2) CodeBuild/
 text
-* (5) DB Instance AZ1  
+* (3) CodeDeploy/
 text
-* (6) CloudFront  
+* (4) EC2 Instance AZ1/
 text
-* (7) InternetGateway  
+* (5) DB Instance AZ1/
 text
-* (8) ALB  
+* (6) CloudFront/
 text
-* (9) Cloudwatch  
+* (7) InternetGateway/
 text
-* (10) EC2 Standby AZ2  
+* (8) ALB/
 text
-* (11) DB Standby AZ2  
+* (9) Cloudwatch/
+text
+* (10) EC2 Standby AZ2/
+text
+* (11) DB Standby AZ2/
 text
