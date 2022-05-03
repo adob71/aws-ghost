@@ -6,7 +6,7 @@ from diagrams.aws.devtools import Codepipeline, Codecommit, Codebuild, Codedeplo
 from diagrams.aws.management import OrganizationsAccount, Cloudwatch
 from diagrams.aws.general import Users
 
-with Diagram("Diagram", direction="TB", show=False):
+with Diagram("Diagram", direction="LR", show=False):
 
     DevOps = Users("DevOps")
     Users = Users("Users")
