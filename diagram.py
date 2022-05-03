@@ -28,7 +28,7 @@ with Diagram("Diagram", direction="LR", show=False):
                     RDS = [RDS("(6) DB Instance AZ1"), RDS("(7) DB Standby AZ2")]      
                 RDS[0] >> Edge(color="red", style="dashed", label="Replicate") >> RDS[1]
 
-                Users >> CloudFront >> InternetGateway >> ALB >> EC2Instance[0] 
+                Users >> CloudFront >> InternetGateway >> ALB >> EC2Instance[0] >> RDS[0]
 
             with Cluster("CloudWatch"):
                 Cloudwatch = Cloudwatch("(8) CloudWatch")
