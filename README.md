@@ -17,19 +17,19 @@ text
 text
 * (3) ALB  
 text
-* (4) EC2 Instance AZ1
+* (4) EC2 Instance AZ1  
 text
-* (5) EC2 Standby AZ2
+* (5) EC2 Standby AZ2  
 text
-* (6) DB Instance AZ1
+* (6) DB Instance AZ1  
 text
-* (7) DB Standby AZ2
+* (7) DB Standby AZ2  
 text
 * (8) Cloudwatch  
 text
-* (9) CodeCommit
+* (9) CodeCommit  
 text
-* (10) CodeBuild
+* (10) CodeBuild  
 text
-* (11) CodeDeploy
+* (11) CodeDeploy  
 text
