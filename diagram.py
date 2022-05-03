@@ -13,7 +13,7 @@ with Diagram("Diagram", direction="LR", show=False):
 
     with Cluster("AWS"):
 
-        with Cluster("OrganizationsAccount"):
+        with Cluster("Account"):
 
             with Cluster("VPC"):
                 CloudFront = CloudFront("(1) CloudFront")
