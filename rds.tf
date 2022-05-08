@@ -4,7 +4,8 @@ resource "aws_db_instance" "mysql_instance" {
   engine                 = "mysql"
   engine_version         = var.mysql_engine_version
   instance_class         = var.mysql_instance_class
-  name                   = var.mysql_name
+//  name                   = var.mysql_name
+  db_name                   = var.mysql_name
   username               = local.mysql_credentials.username
   password               = local.mysql_credentials.password
   db_subnet_group_name   = aws_db_subnet_group.mysql_subnet_group.name

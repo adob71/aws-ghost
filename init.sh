@@ -8,7 +8,7 @@ apt-get install -y nginx
 sudo sed -i 's/# server_names_hash_bucket_size 64/server_names_hash_bucket_size 128/g' /etc/nginx/nginx.conf
 sudo service nginx reload
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash
 apt-get install -y nodejs
 npm install npm@latest -g
 
