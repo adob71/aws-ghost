@@ -10,10 +10,10 @@ AWS is the chosen cloud platform.
 # Account  
 The account holds the environment.  
 # Components  
-The environment consists of the components as follows :   
-* (1) CloudFront   
-Users access ghost from the web browser using secure HTTPS via the edge cache and the sessions get routed to the internet gateway.  
-* (2) InternetGateway   
+The environment consists of the components as follows :  
+* (1) CloudFront  
+Users access ghost from the web browser using secure HTTPS via the edge cache whereby the sessions get routed to the internet gateway.  
+* (2) InternetGateway  
 The sessions get routed from the internet gateway to the load balancer.  
 * (3) ALB  
 The sessions get routed from the load balancer to the running compute instance.  
@@ -32,8 +32,8 @@ Developers push the code (ghost) to the git repository.
 * (10) CodeBuild  
 The code gets built. This component is not required if the code is interpreted (java script).  
 * (11) CodeDeploy  
-The application gets deployed to the running compute instance.  
+The code gets deployed to the running compute instance.  
 * (12) LambdaFunction  
 The serverless function deletes the posts in ghost (java script + ghost API).  
 Usage :  
-aws lambda invoke --function-name delete --payload fileb://payload.json response.json
+aws lambda invoke --function-name delete --payload fileb://payload.json response.json  
