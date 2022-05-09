@@ -34,6 +34,6 @@ The code gets built. This component is not required if the code is interpreted (
 * (11) CodeDeploy  
 The application gets deployed to the running compute instance.
 * (12) LambdaFunction  
-The function deletes all posts.  
+The serverless function deletes all posts.  
 Usage :  
 aws lambda invoke --function-name delete --payload fileb://payload.json response.json
