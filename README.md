@@ -34,5 +34,6 @@ The code gets built. This component is not required if the code is interpreted (
 * (11) CodeDeploy  
 The application gets deployed to the running compute instance.
 * (12) Lambda
-The lambda function deletes all posts.
-Usage : aws lambda invoke --function-name delete --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
+The lambda function deletes all posts.  
+Usage :  
+aws lambda invoke --function-name delete --payload file://payload.json --cli-binary-format raw-in-base64-out response.json
