@@ -5,8 +5,8 @@ var status = "OK";
 const GhostAdminAPI = require('@tryghost/admin-api');
 
 const api = new GhostAdminAPI({
-  url: event.key1,
-  key: event.key2,
+  url: event.API_URL,
+  key: event.Admin_API_key,
   version: "v3.0"
 });
 
