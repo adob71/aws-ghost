@@ -1,6 +1,6 @@
 from diagrams import Diagram, Cluster, Edge
 from diagrams.aws.network import VPC, CloudFront, InternetGateway, ALB
-from diagrams.aws.compute import EC2AutoScaling, EC2Instance
+from diagrams.aws.compute import EC2AutoScaling, EC2Instance, LambdaFunction
 from diagrams.aws.database import RDS
 from diagrams.aws.devtools import Codepipeline, Codecommit, Codebuild, Codedeploy
 from diagrams.aws.management import OrganizationsAccount, Cloudwatch
@@ -33,8 +33,7 @@ with Diagram("Diagram", direction="LR", show=False):
             with Cluster("CloudWatch"):
                 Cloudwatch = Cloudwatch("(8) CloudWatch")
 
-                EC2Instance[0] >> Cloudwatch
-#                RDS[0] >> Cloudwatch
+                DevOps >> Cloudwatch >> EC2Instance[0]
 
             with Cluster("CodePipeline"):
                 Codecommit = Codecommit("(9) CodeCommit")
@@ -42,3 +41,8 @@ with Diagram("Diagram", direction="LR", show=False):
                 Codedeploy = Codedeploy("(11) CodeDeploy")
 
                 DevOps >> Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
+
+            with Cluster("Lambda"):
+                LambdaFunction = LambdaFunction("(12) LambdaFunction")
+
+                DevOps >> LambdaFunction >> EC2Instance[0]
