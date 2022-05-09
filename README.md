@@ -33,8 +33,8 @@ Developers push the code (ghost) to the git repository.
 The code gets built. This component is not required if the code is interpreted (java script).
 * (11) CodeDeploy  
 The application gets deployed to the running compute instance.
-* (12) Lambda  
-The lambda function deletes all posts.  
+* (12) LambdaFunction  
+The function deletes all posts.  
 Usage :  
 aws lambda invoke \  
 --function-name delete \  

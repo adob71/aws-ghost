@@ -42,7 +42,7 @@ with Diagram("Diagram", direction="LR", show=False):
 
                 DevOps >> Codecommit >> Codebuild >> Codedeploy >> EC2Instance[0]
 
-            with Cluster("Lambda"):
+            with Cluster("LambdaFunction"):
                 LambdaFunction = LambdaFunction("(12) LambdaFunction")
 
                 DevOps >> LambdaFunction >> EC2Instance[0]
