@@ -1,0 +1,1 @@
+{"errorType":"Error","errorMessage":"getaddrinfo ENOTFOUND ghost-lb-1239055692.eu-west-2.elb.amazonaws.com","trace":["Error: getaddrinfo ENOTFOUND ghost-lb-1239055692.eu-west-2.elb.amazonaws.com","    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:71:26)"]}
