@@ -1,4 +1,4 @@
 { 
-"API_URL": "http://ghost-lb-770875475.eu-west-2.elb.amazonaws.com" , 
-"Admin_API_key": "62790e6d4b024e15f89966ac:87660be67f1f57af7b943f71aa40c5dc8db99d61a5033570415a0f2e6435bf25" 
+"API_URL": "http://ghost-lb-997374718.eu-west-2.elb.amazonaws.com" , 
+"Admin_API_key": "628b1c601b1c5a19e9a095f4:5f475c3cebbd5baa17a3d4985745f660a9b99ac9a23d4f5f0392870fb7a408f0" 
 }
