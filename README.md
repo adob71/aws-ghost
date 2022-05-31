@@ -1,9 +1,9 @@
-# nordcloud  
+# aws-ghost  
 
 # Solution Proof of Concept Overview  
 
 # Diagram  
-![Diagram](https://github.com/adob71/nordcloud/blob/main/diagram.png)  
+![Diagram](https://github.com/adob71/aws-ghost/blob/main/diagram.png)  
 
 # AWS  
 AWS is the chosen cloud platform.  
