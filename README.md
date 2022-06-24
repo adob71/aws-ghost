@@ -47,7 +47,6 @@ $ terraform destroy
 ```
 .
 ├── asg.tf
-├── CA_Technical_Assignment_V.2.md
 ├── cf.tf
 ├── delete.zip
 ├── diagram.png
