@@ -28,8 +28,9 @@ The code gets built. This component is not required if the code is interpreted (
 The code gets deployed to the running compute instance.  
 * (12) LambdaFunction  
 The serverless function deletes the posts in ghost (java script + ghost API).  
-Usage :  
-aws lambda invoke --function-name delete --payload fileb://payload.json response.json  
+```
+$ aws lambda invoke --function-name delete --payload fileb://payload.json response.json  
+```
 
 ### Deployment
 ```
