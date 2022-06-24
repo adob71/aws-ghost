@@ -1,14 +1,8 @@
-## aws-ghost  
-
 ## System Overview  
 
 ## Architecture  
 ![Diagram](https://github.com/adob71/aws-ghost/blob/main/diagram.png)  
 
-## AWS  
-AWS is the chosen cloud platform.  
-## Account  
-The account holds the environment.  
 ## Components  
 The environment consists of the components as follows :  
 * (1) CloudFront  
