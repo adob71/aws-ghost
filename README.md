@@ -1,15 +1,15 @@
-# aws-ghost  
+## aws-ghost  
 
-# Solution Proof of Concept Overview  
+## System Overview  
 
-# Diagram  
+## Architecture  
 ![Diagram](https://github.com/adob71/aws-ghost/blob/main/diagram.png)  
 
-# AWS  
+## AWS  
 AWS is the chosen cloud platform.  
-# Account  
+## Account  
 The account holds the environment.  
-# Components  
+## Components  
 The environment consists of the components as follows :  
 * (1) CloudFront  
 Users access ghost from the web browser using secure HTTPS via the edge cache whereby the sessions get routed to the internet gateway.  
@@ -37,3 +37,17 @@ The code gets deployed to the running compute instance.
 The serverless function deletes the posts in ghost (java script + ghost API).  
 Usage :  
 aws lambda invoke --function-name delete --payload fileb://payload.json response.json  
+
+## Deployment
+```
+$ terraform init
+$ terraform apply
+```
+
+## Decommissioning
+```
+$ terraform destroy
+```
+
+## Project Structure
+
