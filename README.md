@@ -42,6 +42,3 @@ $ terraform apply
 ```
 $ terraform destroy
 ```
-
-### Project Structure
-
