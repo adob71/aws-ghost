@@ -34,7 +34,6 @@ aws lambda invoke --function-name delete --payload fileb://payload.json response
 
 ### Deployment
 ```
-$ terraform init
 $ terraform apply
 ```
 
