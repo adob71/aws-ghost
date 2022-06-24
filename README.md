@@ -1,9 +1,9 @@
-## System Overview  
+### System Overview  
 
-## Architecture  
+### Architecture  
 ![Diagram](https://github.com/adob71/aws-ghost/blob/main/diagram.png)  
 
-## Components  
+### Components  
 The environment consists of the components as follows :  
 * (1) CloudFront  
 Users access ghost from the web browser using secure HTTPS via the edge cache whereby the sessions get routed to the internet gateway.  
@@ -32,16 +32,16 @@ The serverless function deletes the posts in ghost (java script + ghost API).
 Usage :  
 aws lambda invoke --function-name delete --payload fileb://payload.json response.json  
 
-## Deployment
+### Deployment
 ```
 $ terraform init
 $ terraform apply
 ```
 
-## Decommissioning
+### Decommissioning
 ```
 $ terraform destroy
 ```
 
-## Project Structure
+### Project Structure
 
