@@ -23,11 +23,11 @@ The performance metrics are collected from the running compute instance and the 
 * (9) CodeCommit  
 Developers push the code (ghost) to the git repository.  
 * (10) CodeBuild  
-The code gets built. This component is not required if the code is interpreted (java script).  
+The code gets built. This component is not required if the code is interpreted (JS).  
 * (11) CodeDeploy  
 The code gets deployed to the running compute instance.  
 * (12) LambdaFunction  
-The serverless function deletes the posts in ghost (java script + ghost API).  
+The serverless function deletes the posts in ghost (JS + ghost SDK).  
 ```
 $ aws lambda invoke --function-name delete --payload fileb://payload.json response.json  
 ```
