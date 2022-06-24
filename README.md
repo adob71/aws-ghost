@@ -42,3 +42,40 @@ $ terraform apply
 ```
 $ terraform destroy
 ```
+
+### Project Structure
+```
+.
+├── asg.tf
+├── CA_Technical_Assignment_V.2.md
+├── cf.tf
+├── delete.zip
+├── diagram.png
+├── diagram.py
+├── ghost-client.js
+├── iam.tf
+├── index.js
+├── init.sh
+├── lb.tf
+├── lf.tf
+├── node_modules
+│   └── @tryghost
+│       └── admin-api
+│           ├── index.js
+│           ├── lib
+│           │   ├── admin-api.js
+│           │   └── token.js
+│           ├── LICENSE
+│           ├── package.json
+│           └── README.md
+├── package-lock.json
+├── payload.json
+├── provider.tf
+├── rds.tf
+├── README.md
+├── response.json
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── variables.tf
+└── vpc.tf
+```
