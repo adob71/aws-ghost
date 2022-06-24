@@ -4,7 +4,6 @@
 ![Diagram](https://github.com/adob71/aws-ghost/blob/main/diagram.png)  
 
 ### Components  
-The environment consists of the components as follows :  
 * (1) CloudFront  
 Users access ghost from the web browser using secure HTTPS via the edge cache whereby the sessions get routed to the internet gateway.  
 * (2) InternetGateway  
